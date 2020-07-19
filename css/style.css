@@ -1,0 +1,86 @@
+/***** Google fonts *****/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+ul,ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/*** Fixed Height and Parent div flex ***/
+.verticalCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*** ***/
+#nav-icon3 {
+    padding: 20px 40px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/*Right Navigation*/
+
+.navigation-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background: rgba(0,0,0,.5);
+    transform: translateX(0%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+.navigation-wrapper.nav-open {
+    opacity: 1;
+    visibility: visible;
+}
+.navigation {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #f7f7f7;
+    padding: 30px 25px 10px 25px;
+    transform: translateX(100%);
+    z-index: 50;
+}
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation li a {
+    color: #000;
+    display: block;
+    padding: 8px 5px;
+    font: 400 18px / 31px "Open Sans", sans-serif;
+}
+.navigation li a:hover, .navigation li a:focus {
+    text-decoration: none;
+}
+.navigation .close-nav {
+    background: transparent;
+    border-radius: 0;
+    position: relative;
+    margin-bottom: 40px;
+    opacity: 1;
+}
+.navigation .close-nav:hover, .navigation .close-nav:focus {
+    outline: none;
+    box-shadow: none;
+}
+.navigation .close-nav img {
+    width: 25px;
+}
